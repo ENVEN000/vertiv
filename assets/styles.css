@@ -214,3 +214,16 @@ a:hover { text-decoration-thickness: 2px; }
 .grid > .photo { margin: 0; }
 .prose .photo { margin: 24px 0; }
 .grid > .photo img { aspect-ratio: 4 / 3; object-fit: contain; }
+
+/* franja de transición con imagen de fondo */
+.banner { position: relative; background-color: #0b0b0c; background-image: url("img/robot-banner.webp"); background-size: cover; background-position: right center; color: var(--on-dark); }
+.banner::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #0b0b0cf0 0%, #0b0b0cd9 38%, #0b0b0c40 70%, transparent 100%); }
+.banner-inner { position: relative; padding-top: 88px; padding-bottom: 88px; }
+.banner-copy { max-width: 520px; }
+.banner h2 { color: #fff; }
+.banner p { color: var(--on-dark-2); font-size: 1.1rem; }
+.banner :focus-visible { outline-color: var(--acc); }
+@media (max-width: 760px) {
+  .banner::before { background: #0b0b0cd1; }
+  .banner-inner { padding-top: 60px; padding-bottom: 60px; }
+}
