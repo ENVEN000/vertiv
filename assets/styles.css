@@ -205,3 +205,12 @@ a:hover { text-decoration-thickness: 2px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* fotografías */
+.photo { margin: 0 0 20px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.photo img { display: block; width: 100%; height: auto; }
+.photo figcaption { padding: 10px 14px; font-size: .88rem; color: var(--ink-2); border-top: 1px solid var(--line); }
+.photo--wide { max-width: 640px; margin: 0 auto 28px; }
+.grid > .photo { margin: 0; }
+.prose .photo { margin: 24px 0; }
+.grid > .photo img { aspect-ratio: 4 / 3; object-fit: contain; }
